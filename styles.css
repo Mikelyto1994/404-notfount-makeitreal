@@ -166,6 +166,10 @@ body {
     box-sizing: border-box;
   }
 
+  .principal p {
+    border: none;
+  }
+
   /* Ajustar el margen y el espaciado entre elementos */
   .principal > * {
     padding-bottom: 20px; /* Espacio entre cada elemento hijo */
