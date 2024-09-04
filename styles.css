@@ -187,7 +187,7 @@ body {
 
   .principal p {
     font-size: 20px; /* Tamaño del texto ajustado para pantallas pequeñas */
-    border-width: 2px; /* Grosor del borde ajustado para pantallas pequeñas */
+    border: none; /* Grosor del borde ajustado para pantallas pequeñas */
     margin-left: 20px; /* Ajusta el margen para pantallas pequeñas */
   }
 
