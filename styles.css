@@ -1,0 +1,197 @@
+/* Variables para colores */
+:root {
+  --black: #333333;
+  --gray2: #4f4f4f;
+  --purple-border: rgb(239, 63, 176);
+}
+
+/* General Styles */
+body {
+  font-family: "Space Mono", monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff; /* Fondo blanco para toda la página */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea los elementos hijos al centro */
+}
+
+/* Contenedor específico para el título Subtitle */
+.title-container {
+  width: 100%; /* Ocupa el 100% del ancho del contenedor padre */
+  display: flex;
+  justify-content: flex-start; /* Alinea el contenido al inicio (izquierda) */
+  padding: 20px;
+}
+
+.Subtitle {
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin: 10px 0; /* Ajusta el margen según sea necesario */
+  font-size: 36px; /* Tamaño de fuente según sea necesario */
+  color: var(--black); /* Color del texto usando variable ROOT */
+  padding-left: 100px; /* Añade 20px de espacio dentro del contenedor hacia la izquierda */
+}
+
+/* Container for image and principal */
+.container {
+  display: flex;
+  width: 1440px; /* Ancho total del contenedor */
+  height: 800px; /* Alto total (ajustado según el diseño) */
+}
+
+/* Image styling */
+.image {
+  width: 50%; /* 50% del ancho total */
+  height: 100%; /* 100% del alto total */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
+
+/* Image styling */
+.image img {
+  max-width: 80%; /* Ajusta el tamaño de la imagen para que no se desborde */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Principal content styling */
+.principal {
+  width: 50%; /* 50% del ancho total */
+  height: 100%; /* 100% del alto total */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea los elementos hijos a la izquierda */
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding: 20px;
+  background-color: #ffffff; /* Color de fondo blanco para el área principal */
+  margin-top: 120px; /* Espacio desde la parte superior de la página */
+}
+
+/* Añadir margen inferior a los elementos hijos para el espaciado */
+.principal > * {
+  padding-bottom: 60px; /* Espacio entre cada elemento hijo */
+}
+
+/* Elimina el margen inferior del último hijo */
+.principal > *:last-child {
+  margin-top: 30px;
+  padding-bottom: 0px;
+}
+
+/* Text styles for the principal section */
+.principal h1 {
+  font-size: 68px; /* Tamaño grande para el encabezado (ajustado) */
+  color: var(--black); /* Color del texto usando variable ROOT */
+  margin: 0;
+}
+
+.principal p {
+  font-size: 24px; /* Tamaño del texto (ajustado) */
+  color: var(--gray2); /* Color del texto usando variable ROOT */
+  margin: 20px 0;
+  border: 4px solid var(--purple-border); /* Borde de color morado usando variable ROOT */
+  padding: 10px;
+}
+
+.principal button {
+  font-size: 12px;
+  width: 200px;
+  color: #ffffff;
+  background-color: var(--black); /* Color de fondo usando variable ROOT */
+  border: none;
+  height: 80px;
+  padding: 0px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.principal button:hover {
+  background-color: #555555;
+}
+
+/* Attribution section styling */
+.attribution {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* Ajustes para pantallas móviles */
+@media (max-width: 375px) {
+  .title-container {
+    padding-left: 50px; /* Ajusta el padding para pantallas pequeñas */
+  }
+
+  .Subtitle {
+    font-size: 24px; /* Tamaño de fuente más pequeño en pantallas móviles */
+    padding-left: 10px; /* Ajusta el padding para pantallas pequeñas */
+  }
+
+  .container {
+    flex-direction: column; /* Cambia la dirección del contenedor a columna */
+    width: 100%; /* Ancho total del contenedor ajustado para pantallas pequeñas */
+    height: auto; /* Alto automático para pantallas pequeñas */
+  }
+
+  .image {
+    width: 100%; /* Ancho total del contenedor ajustado para pantallas pequeñas */
+    height: auto; /* Alto automático para pantallas pequeñas */
+  }
+
+  .image img {
+    width: 100%; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-top: 40px;
+  }
+
+  .principal {
+    width: 100%; /* Ancho total del contenedor ajustado para pantallas pequeñas */
+    height: auto; /* Alto automático para pantallas pequeñas */
+    margin-top: 20px; /* Ajusta el margen superior para pantallas pequeñas */
+    padding: 10px; /* Ajusta el padding para pantallas pequeñas */
+  }
+
+  /* Ajustar el margen y el espaciado entre elementos */
+  .principal > * {
+    padding-bottom: 20px; /* Espacio entre cada elemento hijo */
+  }
+
+  .principal > *:last-child {
+    padding-bottom: 0;
+  }
+
+  .principal h1 {
+    font-size: 46px; /* Tamaño del encabezado ajustado para pantallas pequeñas */
+    padding-left: 20px; /* Ajusta el padding para pantallas pequeñas */
+    margin-top: 40px;
+  }
+
+  .principal p {
+    font-size: 20px; /* Tamaño del texto ajustado para pantallas pequeñas */
+    border-width: 2px; /* Grosor del borde ajustado para pantallas pequeñas */
+    margin-left: 20px; /* Ajusta el margen para pantallas pequeñas */
+  }
+
+  .principal button {
+    font-size: 14px; /* Tamaño de fuente del botón ajustado para pantallas pequeñas */
+    width: auto; /* Ajusta el ancho del botón para pantallas pequeñas */
+    height: 60px; /* Ajusta la altura del botón para pantallas pequeñas */
+    padding: 10px 20px; /* Ajusta el padding del botón para pantallas pequeñas */
+    margin-left: 20px;
+  }
+  .attribution {
+    margin-top: 120px;
+  }
+}
