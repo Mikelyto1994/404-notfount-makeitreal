@@ -36,8 +36,9 @@ body {
 /* Container for image and principal */
 .container {
   display: flex;
-  width: 1440px; /* Ancho total del contenedor */
-  height: 800px; /* Alto total (ajustado según el diseño) */
+  width: 100%; /* Cambiar a ancho relativo */
+  max-width: 1440px; /* Ancho máximo */
+  height: auto; /* Ajustar altura según contenido */
 }
 
 /* Image styling */
@@ -132,6 +133,7 @@ body {
 @media (max-width: 375px) {
   .title-container {
     padding-left: 50px; /* Ajusta el padding para pantallas pequeñas */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
   }
 
   .Subtitle {
@@ -161,6 +163,7 @@ body {
     height: auto; /* Alto automático para pantallas pequeñas */
     margin-top: 20px; /* Ajusta el margen superior para pantallas pequeñas */
     padding: 10px; /* Ajusta el padding para pantallas pequeñas */
+    box-sizing: border-box;
   }
 
   /* Ajustar el margen y el espaciado entre elementos */
